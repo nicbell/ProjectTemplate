@@ -1,0 +1,40 @@
+# Our lint overrides
+# Default here: https://github.com/causes/scss-lint/blob/master/config/default.yml
+linters:
+
+  CapitalizationInSelector:
+    enabled: false #overrides hyphenated_lowercase to become hyphenated camelcase
+
+  Comment:
+    enabled: false
+
+  FinalNewline:
+    enabled: false
+    present: true
+
+  Indentation:
+    enabled: false
+    character: space # or 'tab'
+    width: 4
+
+  LeadingZero:
+    enabled: false
+    style: exclude_zero # or 'include_zero'
+
+  PropertySortOrder:
+    enabled: false
+    ignore_unspecified: false
+
+  Shorthand:
+    enabled: false
+
+  SingleLinePerSelector:
+    enabled: false
+
+  SpaceAfterPropertyColon:
+    enabled: true
+    style: at_least_one_space # 'one_space' or 'no_space', or 'at_least_one_space', or 'aligned'
+
+  StringQuotes:
+    enabled: false
+    style: single_quotes # or double_quotes

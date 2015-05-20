@@ -1,0 +1,7 @@
+# ProjectTemplate ignore rules
+
+node_modules/
+bower_components/
+_testresults/
+.sass-cache/
+**/assets/dist/*
