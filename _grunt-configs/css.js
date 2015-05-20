@@ -1,14 +1,14 @@
 module.exports.tasks = {
     /**
-     * Sass compilation
-     * https://github.com/gruntjs/grunt-contrib-sass
-     * Also creates source maps
-     */
+	 * Sass compilation using grunt-sass
+	 * https://github.com/sindresorhus/grunt-sass
+	 */
     sass: {
         dist: {
             options: {
                 style: 'compressed',
-                precision: 8
+                precision : 10,
+                sourceMap : true
             },
             files: {
                 '<%=config.css.distDir%>/temp/<%=config.css.srcFile%>.css': '<%=config.css.scssDir%>/<%=config.css.srcFile%>.scss',
