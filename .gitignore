@@ -4,4 +4,6 @@ node_modules/
 bower_components/
 _testresults/
 .sass-cache/
-**/assets/dist/*
+**/assets/dist/js/*
+**/assets/dist/css/*
+**/lib/**
