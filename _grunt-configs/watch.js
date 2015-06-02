@@ -16,7 +16,7 @@ module.exports.tasks = {
         },
 
         grunt: {
-            files: ['grunt/*.js', 'Gruntfile.js'],
+            files: ['_grunt-configs/*.js', 'Gruntfile.js'],
             tasks: ['build', 'githooks']
         }
     }
