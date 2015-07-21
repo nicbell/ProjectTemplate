@@ -27,7 +27,7 @@ module.exports.tasks = {
      */
     shimly: {
         shim: ['Function.bind'],
-        dest: '<%=config.js.srcDir%>/lib/shims.js',
+        dest: '<%=config.webroot%>/lib/shims.js',
         minify: false
     }
 };

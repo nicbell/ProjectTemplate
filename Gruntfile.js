@@ -12,31 +12,31 @@ module.exports = function (grunt) {
          */
         config: {
             src: '_grunt-configs/*.js',
+            webroot: 'wwwroot',
 
             css: {
-                distDir: 'assets/dist/css', // <%=config.css.distDir%>
+                distDir: '<%=config.webroot%>/dist/css', // <%=config.css.distDir%>
                 srcFile: 'app', // <%=config.css.srcFile%>
-                scssDir: 'assets/src/scss' // <%=config.css.scssDir%>
+                scssDir: '<%=config.webroot%>/src/scss' // <%=config.css.scssDir%>
             },
 
             js: {
-                srcDir: 'assets/src/js',
-                distDir: 'assets/dist/js', // <%=config.js.distDir%>
+                distDir: '<%=config.webroot%>/dist/js', // <%=config.js.distDir%>
                 distFile: 'app.min.js', // <%=config.js.distFile%>
-                bowerDir: 'bower_components',
+                srcDir: '<%=config.webroot%>/src/js',           
 
                 // <%=config.js.fileList%>
                 fileList: [
                     //Bower
-                    //'<%=config.js.bowerDir%>/picturefill/dist/picturefill.js',
-                    '<%=config.js.bowerDir%>/attach/attach.js',
-                    '<%=config.js.bowerDir%>/klass/klass.js',
-                    '<%=config.js.bowerDir%>/microevent/microevent.js',
-                    //'<%=config.js.bowerDir%>/swipe-js/swipe.js',
-                    //'<%=config.js.bowerDir%>/mustache.js/mustache.js',
+                    //'<%=config.webroot%>/lib/picturefill/dist/picturefill.js',
+                    '<%=config.webroot%>/lib/attach/attach.js',
+                    '<%=config.webroot%>/lib/klass/klass.js',
+                    '<%=config.webroot%>/lib/microevent/microevent.js',
+                    //'<%=config.webroot%>/lib/swipe-js/swipe.js',
+                    //'<%=config.webroot%>/lib/mustache.js/mustache.js',
 
                     //Shimly
-                    '<%=config.js.srcDir%>/shims.js',
+                    '<%=config.webroot%>/lib/shims.js',
 
                     //App
                     '<%=config.js.srcDir%>/*.js'
