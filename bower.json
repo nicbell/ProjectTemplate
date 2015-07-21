@@ -3,11 +3,11 @@
     "version": "1.0.0",
     "private": true,
     "dependencies": {
-        "attach": "1.0.2",
+        "attach": "1.0.3",
         "microevent": "jeromeetienne/microevent.js",
         "klass": "ded/klass",
         "picturefill": "2.2.0",
         "swipe-js": "~2.0.6",
-        "mustache.js":  "~2.0.0"
+        "mustache.js": "~2.1.2"
     }
 }

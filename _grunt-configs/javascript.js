@@ -26,7 +26,7 @@ module.exports.tasks = {
      * Create a JavaScript shim set
      */
     shimly: {
-        shim: ['Function.bind'],
+        shim: ['Function.bind', 'Object.assign'],
         dest: '<%=config.webroot%>/lib/shims.js',
         minify: false
     }

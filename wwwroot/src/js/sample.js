@@ -16,9 +16,9 @@
             //this.$element = $(element);
             //this.options = $.extend(true, {}, this.options, this.$element.data('sample-options') || {});
 
-            //if native ES6
-            //this.element = element;
-            //this.options = Object.assign(this.options, JSON.parse(this.element.dataset.sampleOptions || {}));
+            //if native ES6 or shimming Object.assign
+            this.element = element;
+            this.options = Object.assign(this.options, JSON.parse(this.element.dataset.sampleOptions || {}));
 
             this.addEvents();
         },
