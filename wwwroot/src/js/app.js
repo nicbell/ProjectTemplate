@@ -17,7 +17,7 @@
         Attach.run();
     });
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener('DOMContentLoaded', function () {
         App.trigger('contentLoaded');
     });
 

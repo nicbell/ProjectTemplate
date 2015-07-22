@@ -1,19 +1,12 @@
 {
-    "requireCurlyBraces": ["while", "do", "try", "catch"],
-    "requireSpaceAfterKeywords": ["if", "else", "for", "while", "do", "switch", "return", "try", "catch"],
-	"requireSpacesInFunctionExpression": {
-        "beforeOpeningCurlyBrace": true
-    },
-	"disallowMixedSpacesAndTabs": "smart",
-	"requireSpacesInsideObjectBrackets": "all",
-	"disallowKeywords": [ "with" ],
-	"requireSpaceBeforeBinaryOperators": [ "+", "-", "/", "*", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<=" ],
-    "requireSpaceAfterBinaryOperators": [ "+", "-", "/", "*", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<=" ],
-    "disallowSpaceBeforeBinaryOperators": [","],
-	    "requireSpacesInConditionalExpression": {
-        "afterTest": true,
-        "beforeConsequent": true,
-        "afterConsequent": true,
-        "beforeAlternate": true
-    }
+    "preset": "mdcs",
+
+    "requireLineFeedAtFileEnd": null,
+    "requirePaddingNewlinesInBlocks": null,
+    "requireSpaceBeforePostfixUnaryOperators": null,
+    "validateLineBreaks": null,
+    "validateIndentation": null,
+
+    "disallowMixedSpacesAndTabs": "smart",
+    "validateQuoteMarks": "'"
 }
