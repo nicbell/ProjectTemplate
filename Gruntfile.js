@@ -21,26 +21,9 @@ module.exports = function (grunt) {
             },
 
             js: {
+                entryFile: 'app.js', // <%=config.js.mainFile%>
                 distDir: '<%=config.webroot%>/dist/js', // <%=config.js.distDir%>
-                distFile: 'app.min.js', // <%=config.js.distFile%>
-                srcDir: '<%=config.webroot%>/src/js',           
-
-                // <%=config.js.fileList%>
-                fileList: [
-                    //Bower
-                    //'<%=config.webroot%>/lib/picturefill/dist/picturefill.js',
-                    '<%=config.webroot%>/lib/attach/attach.js',
-                    '<%=config.webroot%>/lib/klass/klass.js',
-                    '<%=config.webroot%>/lib/microevent/microevent.js',
-                    //'<%=config.webroot%>/lib/swipe-js/swipe.js',
-                    //'<%=config.webroot%>/lib/mustache.js/mustache.js',
-
-                    //Shimly
-                    '<%=config.webroot%>/lib/shims.js',
-
-                    //App
-                    '<%=config.js.srcDir%>/*.js'
-                ]
+                srcDir: '<%=config.webroot%>/src/js'
             }
         }
     };
@@ -59,14 +42,14 @@ module.exports = function (grunt) {
         Available tasks:
 
         * grunt test    : run jshint, jscs, scsslint and  photobox
-        * grunt build   : run bower install, shimly, uglify, sass and autoprefixer
+        * grunt build   : run bower install, shimly, browserify, sass and autoprefixer
         * grunt         : run test and build
         * grunt release : run test, build and csso
         * grunt start   : run build and watch
        ========================================================================== */
 
     grunt.registerTask('test', ['jshint', 'jscs', 'scsslint'/*, 'photobox'*/]);
-    grunt.registerTask('build', ['shimly', 'uglify', 'sass:dist', 'autoprefixer:dist']);
+    grunt.registerTask('build', ['shimly', 'browserify', 'sass:dist', 'autoprefixer:dist']);
 
     grunt.registerTask('default', ['test', 'build']);
     grunt.registerTask('release', ['test', 'build', 'csso']);

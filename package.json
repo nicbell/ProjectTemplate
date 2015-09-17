@@ -1,51 +1,56 @@
 {
-    "name": "ProjectTemplate",
-    "title": "ProjectTemplate",
-    "description": "My project template",
-    "version": "1.0.0",
-    "homepage": "https://github.com/nicbell/projecttemplate/",
-    "authors": [
-        {
-            "name": "Nic Bell",
-            "url": "http://nicbell.net"
-        }
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/nicbell/projecttemplate.git"
-    },
-    "bugs": {
-        "url": "https://github.com/nicbell/projecttemplate/issues"
-    },
-    "license": "MIT",
-    "engines": {
-        "node": ">=0.12.0"
-    },
-    "dependencies": {
-        "async": "~1.2.1",
-        "grunt": "~0.4.5",
-        "grunt-sass": "^1.0.0",
-        "grunt-contrib-jshint": "~0.11.2",
-        "grunt-contrib-uglify": "~0.9.1",
-        "grunt-autoprefixer": "~3.0.3",
-        "grunt-csso": "~0.7.1",
-        "grunt-jscs": "~1.8.0",
-        "grunt-scss-lint": "~0.3.8",
-        "grunt-shimly": "~0.0.11",
-        "grunt-photobox": "~0.8.1",
-        "grunt-githooks": "~0.3.1",
-        "load-grunt-tasks": "~3.2.0",
-        "load-grunt-configs": "~0.4.3"
-    },
-    "devDependencies": {
-        "grunt-contrib-watch": "~0.6.1"
-    },
-    "keywords": [ ],
-    "scripts": {
-        "grunt": "grunt",
-        "pregrunt": "npm install -g grunt-cli && npm install -g bower && npm install && bower install",
-
-        "release": "npm run grunt -- release",
-        "postrelease": "npm install -g rimraf && rimraf node_modules && rimraf .sass-cache"
+  "name": "ProjectTemplate",
+  "title": "ProjectTemplate",
+  "description": "My project template",
+  "version": "1.0.0",
+  "homepage": "https://github.com/nicbell/projecttemplate/",
+  "authors": [
+    {
+      "name": "Nic Bell",
+      "url": "http://nicbell.net"
     }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nicbell/projecttemplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nicbell/projecttemplate/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "dependencies": {
+    "attach.js": "^1.0.5",
+    "daccord-validation": "^1.0.0",
+    "klass": "^1.4.1",
+    "microevent": "^1.0.0",
+    "mustache": "^2.1.3",
+    "picturefill": "^2.3.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-browserify": "^4.0.0",
+    "minifyify": "^7.0.5",
+    "grunt-sass": "^1.0.0",
+    "grunt-autoprefixer": "~3.0.3",
+    "grunt-csso": "~0.7.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-jshint": "~0.11.2",
+    "grunt-jscs": "~1.8.0",
+    "grunt-scss-lint": "~0.3.8",
+    "grunt-shimly": "~0.0.11",
+    "grunt-photobox": "~0.8.1",
+    "grunt-githooks": "~0.3.1",
+    "load-grunt-tasks": "~3.2.0",
+    "load-grunt-configs": "~0.4.3"
+  },
+  "keywords": [],
+  "scripts": {
+    "grunt": "grunt",
+    "pregrunt": "npm install -g grunt-cli && npm install",
+    "release": "npm run grunt -- release",
+    "postrelease": "npm install -g rimraf && rimraf node_modules && rimraf .sass-cache"
+  }
 }

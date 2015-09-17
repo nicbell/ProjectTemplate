@@ -1,25 +1,30 @@
 module.exports.tasks = {
     /**
-     * Uglify
-     * https://github.com/gruntjs/grunt-contrib-uglify
-     * Minifies and concatinates your JS
-     * Also creates source maps
-     */
-    uglify: {
-        options: {
-            banner: '/*! <%= grunt.template.today("yyyy-mm-dd") %> */',
-            mangle: true, // mangle: Turn on or off mangling
-            beautify: false, // beautify: beautify your code for debugging/troubleshooting purposes
-            compress: true,
-            // report: 'gzip', // report: Show file size report
-            sourceMap: true
-        },
-        js: {
-            src: '<%=config.js.fileList%>',
-            dest: '<%=config.js.distDir%>/<%=config.js.distFile%>'
+	 * Browserify
+	 * https://github.com/jmreidy/grunt-browserify
+	 * Grunt task for node-browserify – allows CommonJS-style JS code and packages it for use in the browser
+	 */
+    browserify: {
+        main: {
+            src: ['<%=config.js.srcDir%>/<%=config.js.entryFile%>'],
+            dest: '<%=config.js.distDir%>/<%=config.js.entryFile%>',
+            options: {
+                browserifyOptions: {
+                    debug: true,
+                    fullPaths: false
+                },
+                plugin: [
+                    ['minifyify', {
+                        output: '<%=config.js.distDir%>/<%=config.js.entryFile%>.map',
+                        map: '<%=config.js.entryFile%>.map'
+                    }]
+                ],
+                watch: true
+            }
         }
     },
-
+    
+    
     /**
      * Shimly
      * https://github.com/nicbell/Shimly

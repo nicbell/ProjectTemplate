@@ -11,8 +11,8 @@ module.exports.tasks = {
         },
 
         js: {
-            files: ['<%=config.js.fileList%>'],
-            tasks: ['shimly', 'uglify']
+            files: ['<%=config.js.srcDir%>/**/*.js'],
+            tasks: ['shimly', 'browserify']
         },
 
         grunt: {

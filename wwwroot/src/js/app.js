@@ -2,23 +2,20 @@
 	Description: Main script file entry point, DOM ready ect
 */
 
-;(function (App) {
+var MicroEvent = require('microevent'),
+    Attach = require('attach.js');
 
-    //App obj handles events between classes
-    MicroEvent.mixin(App);
+require('./attachments');
 
-    //Time to bind to DOM..
-    App.bind('contentLoaded', function () { 
-        Attach.run();
-    });
 
-    //Run attach after injecting content..
-    App.bind('contentUpdated', function () {
-        Attach.run();
-    });
+// Global pub/sub
+var app = {};
+MicroEvent.mixin(app);
 
-    document.addEventListener('DOMContentLoaded', function () {
-        App.trigger('contentLoaded');
-    });
 
-})(window.App = window.App || {});
+document.addEventListener('DOMContentLoaded', function () {
+    app.trigger('contentLoaded');
+});
+
+
+module.exports = app;

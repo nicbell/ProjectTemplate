@@ -5,7 +5,7 @@ module.exports.tasks = {
 	 * Manage the options inside .jshintrc file
 	 */
     jshint: {
-        all: ['<%=config.js.fileList%>', '!**/lib/**'],
+        all: ['<%=config.js.distDir%>/**', '!**/lib/**'],
         options: {
             jshintrc: '.jshintrc'
         }
@@ -18,7 +18,7 @@ module.exports.tasks = {
      * Manage the options inside .jscs.json file
      */
     jscs: {
-        src: ['<%=config.js.fileList%>', '!**/lib/**'],
+        src: ['<%=config.js.srcDir%>/**', '!**/lib/**'],
         options: {
             config: '.jscs'
         }

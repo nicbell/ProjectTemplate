@@ -1,7 +1,6 @@
 # ProjectTemplate ignore rules
 
 node_modules/
-bower_components/
 _testresults/
 .sass-cache/
 **/wwwroot/dist/js/*
