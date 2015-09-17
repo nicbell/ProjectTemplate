@@ -5,7 +5,7 @@ module.exports.tasks = {
 	 * Manage the options inside .jshintrc file
 	 */
     jshint: {
-        all: ['<%=config.js.distDir%>/**', '!**/lib/**'],
+        all: ['<%=config.js.srcDir%>/**', '!**/lib/**'],
         options: {
             jshintrc: '.jshintrc'
         }
