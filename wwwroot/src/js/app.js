@@ -17,5 +17,4 @@ document.addEventListener('DOMContentLoaded', function () {
     app.trigger('contentLoaded');
 });
 
-
 module.exports = app;

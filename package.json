@@ -1,23 +1,13 @@
 {
-  "name": "ProjectTemplate",
-  "title": "ProjectTemplate",
-  "description": "My project template",
+  "name": "projecttemplate",
   "version": "1.0.0",
-  "homepage": "https://github.com/nicbell/projecttemplate/",
-  "authors": [
-    {
-      "name": "Nic Bell",
-      "url": "http://nicbell.net"
-    }
-  ],
+  "description": "Light front-end build.",
+  "author": "Nic Bell",
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git://github.com/nicbell/projecttemplate.git"
+    "url": "git+https://nicbell@github.com/nicbell/ProjectTemplate.git"
   },
-  "bugs": {
-    "url": "https://github.com/nicbell/projecttemplate/issues"
-  },
-  "license": "MIT",
   "engines": {
     "node": ">=0.12.0"
   },
@@ -33,24 +23,35 @@
     "autoprefixer": "^6.0.3",
     "browserify": "latest",
     "cssnano": "^3.2.0",
+    "gaze": "^0.5.1",
     "minifyify": "^7.0.5",
     "node-sass": "^3.3.3",
-    "postcss-cli": "^2.1.0",
+    "postcss": "^5.0.8",
     "shimly": "^1.1.1"
   },
-  "keywords": [],
   "config": {
-    "webroot": "wwwroot"
+    "webroot": "wwwroot",
+    "js": {
+      "srcDir": "wwwroot/src/js/",
+      "distDir": "wwwroot/dist/js/",
+      "srcFile": "app.js",
+      "sourceMap": "app.map.json",
+      "shims": ["Array.every", "Array.forEach"],
+      "shimFile": "shims.js"
+    },
+    "scss": {
+      "srcDir": "wwwroot/src/scss/",
+      "distDir": "wwwroot/dist/css/",
+      "srcFile": "app.scss",
+      "distFile": "app.css",
+      "sourceMap": "app.css.map"
+    }
   },
   "scripts": {
-    "release": "npm run grunt -- release",
-    "postrelease": "npm install -g rimraf && rimraf node_modules && rimraf .sass-cache",
-    "build:js": "node ./_npmscripts/build-js.js",
-    "build:scss": "node ./_npmscripts/build-scss.js",
     "prebuild": "npm i",
+    "build:js": "node ./_npmscripts/build-js.js -s -c",
+    "build:scss": "node ./_npmscripts/build-scss.js -c",
     "build": "npm run build:js | npm run build:scss",
-    "watch:js": "",
-    "watch:scss": "",
-    "watch": "npm run build:js | npm run build:scss"
+    "watch": "node ./_npmscripts/watch.js"
   }
 }

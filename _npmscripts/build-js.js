@@ -2,34 +2,27 @@
 var fs = require('fs');
 var shimly = require('shimly')
 var Browserify = require('browserify');
-var webroot = require('../package').config.webroot;
+var config = require('../package').config;
 
-//shimly -m -o wwwroot/dist/js/shims.js -s Object.assign,Function.bind
-//browserify -d -p [minifyify --map app.map.json --output wwwroot/dist/js/app.map.json] wwwroot/src/js/app.js > wwwroot/dist/js/app.js
-
-var config = {
-	srcDir: webroot + '/src/js/',
-	distDir: webroot + '/dist/js/',
-	entryFile: 'app.js',
-	sourceMap: 'app.map.json',
-	shims: ['Array.every', 'Array.forEach'],
-	shimFile: 'shims.js'
-};
+// Create shims
+function shim() {
+	shimly.shim(config.js.shims, true, config.js.distDir + config.js.shimFile);
+}
 
 // Compile JS
-function compileJS() {
+function compile() {
 	var bundler = new Browserify({
 		debug: true,
 		fullPaths: false
 	});
 
-	bundler.add(config.srcDir + config.entryFile);
-	bundler.plugin('minifyify', { map: config.sourceMap });
+	bundler.add(config.js.srcDir + config.js.srcFile);
+	bundler.plugin('minifyify', { map: config.js.sourceMap });
 
 	bundler.bundle(function (err, src, map) {
 		if (!err) {
-			fs.writeFile(config.distDir + config.entryFile, src);
-			fs.writeFile(config.distDir + config.sourceMap, map);
+			fs.writeFile(config.js.distDir + config.js.srcFile, src);
+			fs.writeFile(config.js.distDir + config.js.sourceMap, map);
 		}
 		else {
 			console.log(err);
@@ -37,11 +30,14 @@ function compileJS() {
 	});
 }
 
-
-// Create shims
-function shim() {
-	shimly.shim(config.shims, true, config.distDir + config.shimFile);
+// Commandline options.
+if (process) {
+	if (process.argv.indexOf('-s')) shim();
+	if (process.argv.indexOf('-c')) compile();
 }
 
-shim();
-compileJS();
+
+module.exports = {
+	shim: shim,
+	compile: compile
+}
