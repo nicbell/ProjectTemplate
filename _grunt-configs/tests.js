@@ -40,28 +40,5 @@ module.exports.tasks = {
             reporterOutput: '_testresults/scss-lint-report.xml',
             colorizeOutput: true
         },
-    },
-
-
-    /**
-     * Photobox
-     * https://github.com/stefanjudis/grunt-photoBox
-     * Visual regression testing
-     */
-    photobox: {
-        task: {
-            options: {
-                indexPath: '_testresults/',
-                screenSizes: ['1200', '1601'],
-                urls: ['http://localhost.com/'],
-                template: {
-                    name: 'canvas',
-                    options: {
-                        highlightColor: '#ff0000',
-                        diffFilter: 'grayscale'
-                    }
-                }
-            }
-        }
     }
 };

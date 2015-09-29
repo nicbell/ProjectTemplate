@@ -30,27 +30,27 @@
     "picturefill": "^2.3.1"
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-browserify": "^4.0.0",
+    "autoprefixer": "^6.0.3",
+    "browserify": "latest",
+    "cssnano": "^3.2.0",
     "minifyify": "^7.0.5",
-    "grunt-sass": "^1.0.0",
-    "grunt-autoprefixer": "~3.0.3",
-    "grunt-csso": "~0.7.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-contrib-jshint": "~0.11.2",
-    "grunt-jscs": "~1.8.0",
-    "grunt-scss-lint": "~0.3.8",
-    "grunt-shimly": "~0.0.11",
-    "grunt-photobox": "~0.8.1",
-    "grunt-githooks": "~0.3.1",
-    "load-grunt-tasks": "~3.2.0",
-    "load-grunt-configs": "~0.4.3"
+    "node-sass": "^3.3.3",
+    "postcss-cli": "^2.1.0",
+    "shimly": "^1.1.1"
   },
   "keywords": [],
+  "config": {
+    "webroot": "wwwroot"
+  },
   "scripts": {
-    "grunt": "grunt",
-    "pregrunt": "npm install -g grunt-cli && npm install",
     "release": "npm run grunt -- release",
-    "postrelease": "npm install -g rimraf && rimraf node_modules && rimraf .sass-cache"
+    "postrelease": "npm install -g rimraf && rimraf node_modules && rimraf .sass-cache",
+    "build:js": "node ./_npmscripts/build-js.js",
+    "build:scss": "node ./_npmscripts/build-scss.js",
+    "prebuild": "npm i",
+    "build": "npm run build:js | npm run build:scss",
+    "watch:js": "",
+    "watch:scss": "",
+    "watch": "npm run build:js | npm run build:scss"
   }
 }
