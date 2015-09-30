@@ -1,6 +1,6 @@
 var Attach = require('attach.js');
 
-var app = require('./app'),
+var app = require('../app'),
     Sample = require('./sample');
 
 
