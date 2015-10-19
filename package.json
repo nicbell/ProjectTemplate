@@ -25,8 +25,7 @@
     "cssnano": "^3.2.0",
     "gaze": "^0.5.1",
     "minifyify": "^7.0.5",
-    "node-sass": "^3.3.3",
-    "postcss": "^5.0.8",
+    "postscss": "^1.0.5",
     "shimly": "^1.1.1"
   },
   "config": {
@@ -36,7 +35,10 @@
       "distDir": "wwwroot/dist/js/",
       "srcFile": "app.js",
       "sourceMap": "app.map.json",
-      "shims": ["Array.every", "Array.forEach"],
+      "shims": [
+        "Array.every",
+        "Array.forEach"
+      ],
       "shimFile": "shims.js"
     },
     "scss": {
@@ -48,7 +50,7 @@
     }
   },
   "scripts": {
-    "prebuild": "npm i",
+    "prebuild": "npm prune | npm i",
     "build:js": "node ./_npmscripts/build-js.js -s -c",
     "build:scss": "node ./_npmscripts/build-scss.js -c",
     "build": "npm run build:js | npm run build:scss",
