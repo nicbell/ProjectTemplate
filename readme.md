@@ -10,8 +10,12 @@ To create a watcher we can either run `npm run watch`.
 
 ```xml
 <Target Name="BeforeBuild">
-<ItemGroup>
-	<Content Include="wwwroot\dist\**\*.*" />
-</ItemGroup>
+	<ItemGroup>
+		<Content Include="wwwroot\dist\**\*.*" />
+	</ItemGroup>
 </Target>
 ```
+
+## Notes
+
+Path to assets can be changed in `package.json` currently points to `wwwroot`.

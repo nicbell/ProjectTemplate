@@ -16,17 +16,17 @@
     "daccord-validation": "^1.0.0",
     "klass": "^1.4.1",
     "microevent": "^1.0.0",
-    "mustache": "^2.1.3",
-    "picturefill": "^2.3.1"
+    "mustache": "^2.2.0",
+    "picturefill": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.0.3",
-    "browserify": "latest",
-    "cssnano": "^3.2.0",
-    "gaze": "^0.5.1",
+    "browserify": "^11.2.0",
+    "cssnano": "^3.3.1",
+    "gaze": "^0.5.2",
     "minifyify": "^7.0.5",
     "postscss": "^1.0.5",
-    "shimly": "^1.1.1"
+    "shimly": "^1.2.1"
   },
   "config": {
     "webroot": "wwwroot",
