@@ -25,7 +25,7 @@
     "cssnano": "^3.3.1",
     "gaze": "^0.5.2",
     "minifyify": "^7.0.5",
-    "postscss": "^1.0.5",
+    "postscss": "^1.1.1",
     "shimly": "^1.2.1"
   },
   "config": {
