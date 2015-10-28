@@ -21,11 +21,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.0.3",
-    "browserify": "^11.2.0",
+    "browserify": "^12.0.0",
     "cssnano": "^3.3.1",
     "gaze": "^0.5.2",
     "minifyify": "^7.0.5",
-    "postscss": "^1.1.1",
+    "postscss": "^1.2.0",
     "shimly": "^1.2.1"
   },
   "config": {
