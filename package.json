@@ -9,11 +9,11 @@
     "url": "git+https://nicbell@github.com/nicbell/ProjectTemplate.git"
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4.0.0"
   },
   "dependencies": {
     "attach.js": "^1.0.5",
-    "daccord-validation": "^1.0.0",
+    "daccord-validation": "^2.0.1",
     "klass": "^1.4.1",
     "microevent": "^1.0.0",
     "mustache": "^2.2.0",
