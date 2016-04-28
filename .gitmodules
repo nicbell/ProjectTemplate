@@ -1,0 +1,4 @@
+[submodule "scss"]
+	path = scss
+	url = https://github.com/TryKickoff/scss
+	branch = master
