@@ -6,8 +6,8 @@ var config = require('../package').config;
 
 // Compile sass.
 function compile() {
-	var prefix = autoprefixer({ browsers: ['> 1%', 'IE 7'] }),
-		nano = cssnano();
+	var prefix = autoprefixer({ browsers: ['> 1%', 'IE 9'] });
+	var nano = cssnano();
 
 	postscss([prefix, nano]).process({
 		from: config.scss.srcDir + config.scss.srcFile,
