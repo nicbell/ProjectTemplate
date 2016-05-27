@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "attach.js": "^1.0.5",
-    "daccord-validation": "^2.0.1",
     "klass": "^1.4.1",
     "microevent": "^1.0.0",
     "mustache": "^2.2.0",
@@ -21,12 +20,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.0.3",
-    "browserify": "^12.0.0",
+    "browserify": "^13.0.1",
     "cssnano": "^3.3.1",
     "gaze": "^0.5.2",
     "minifyify": "^7.0.5",
-    "postscss": "^1.2.0",
-    "shimly": "^1.2.1"
+    "postscss": "^1.2.0"
   },
   "config": {
     "webroot": "wwwroot",
@@ -34,12 +32,7 @@
       "srcDir": "wwwroot/src/js/",
       "distDir": "wwwroot/dist/js/",
       "srcFile": "app.js",
-      "sourceMap": "app.map.json",
-      "shims": [
-        "Array.every",
-        "Array.forEach"
-      ],
-      "shimFile": "shims.js"
+      "sourceMap": "app.map.json"
     },
     "scss": {
       "srcDir": "wwwroot/src/scss/",

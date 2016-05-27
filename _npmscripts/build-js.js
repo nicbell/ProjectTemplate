@@ -1,13 +1,7 @@
 // Requires
 var fs = require('fs');
-var shimly = require('shimly')
 var Browserify = require('browserify');
 var config = require('../package').config;
-
-// Create shims
-function shim() {
-	shimly.shim(config.js.shims, true, config.js.distDir + config.js.shimFile);
-}
 
 // Compile JS
 function compile() {
@@ -32,12 +26,10 @@ function compile() {
 
 // Commandline options.
 if (process) {
-	if (process.argv.indexOf('-s')) shim();
 	if (process.argv.indexOf('-c')) compile();
 }
 
 
 module.exports = {
-	shim: shim,
 	compile: compile
 }
