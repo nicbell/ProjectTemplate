@@ -23,7 +23,6 @@
     "cssnano": "^3.3.1",
     "browserify": "^13.0.1",
     "babelify": "^7.3.0",
-    "babel-plugin-transform-object-assign": "^6.3.13",
     "babel-preset-es2015": "^6.9.0",
     "minifyify": "^7.0.5",
     "gaze": "^1.0.0"

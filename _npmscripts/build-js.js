@@ -11,7 +11,7 @@ function compile() {
 	});
 
 	bundler.add(config.js.srcDir + config.js.srcFile);
-	bundler.transform('babelify', { presets: ['es2015'], plugins: ['transform-object-assign'] });
+	bundler.transform('babelify', { presets: ['es2015'] });
 	bundler.plugin('minifyify', { map: config.js.sourceMap });
 
 	bundler.bundle(function (err, src, map) {
